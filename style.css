@@ -2,9 +2,14 @@ body{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: rgb(119, 80, 80);
+    /* background-color: rgb(119, 80, 80); */
+    background-image: url(https://static.vecteezy.com/ti/vetor-gratis/p1/9169455-ceu-dourado-por-do-sol-na-costa-natureza-paisagem-vetor.jpg);
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
+/* NAV BAR */
 .header {
     position: absolute;
     top: 0;
@@ -22,15 +27,23 @@ body{
 
 .logo{
     font-size: 2em;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     text-decoration: none;
     font-weight: 700;
 }
 
 .navbar a{
     font-size: 1.4em;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     text-decoration: none;
     margin-left:2.5rem ;
-    
 }
+
+.icons{
+    font-size: 2em;
+    color: aliceblue;
+    cursor: pointer;
+    display: none;
+}
+
+/* NAV BAR FINAL*/
