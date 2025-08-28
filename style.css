@@ -2,44 +2,75 @@ body{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    /* background-color: rgb(119, 80, 80); */
-    background-image: url(https://static.vecteezy.com/ti/vetor-gratis/p1/9169455-ceu-dourado-por-do-sol-na-costa-natureza-paisagem-vetor.jpg);
-    /* background-position: center; */
-    background-repeat: no-repeat;
-    background-size: cover;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: var(--cor-letra-agua);
 }
+
+
+:root{
+    --cor-principal: #132623;
+    --gradient-terra-mar:linear-gradient(0deg,rgba(64, 60, 43, 1) 0%, rgba(19, 38, 35, 1) 100%);
+    --gradient-verde-terra:linear-gradient(0deg,rgba(64, 60, 43, 1) 0%, rgba(0, 51, 41, 1) 27%);
+    --cor-letra-terra:#6c9a7f;
+    --cor-letra2-terra:#01402e;
+    --cor-letra-agua:#8ab0bf;
+    --cor-letra-fogo:#ffc64a;
+}
+
 
 /* NAV BAR */
 .header {
     position: absolute;
     top: 0;
-    left: 0;
-    width: 80%;
+    left:-6em;
+    width: 86%;
     padding: 1.3em 10%;
-    background-color: red;
-    background-color: rgba(0, 0, 0, .1);
-    backdrop-filter: blur(50px);
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    position: fixed;
 }
 
-.logo{
-    font-size: 2em;
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    font-weight: 700;
+.header::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .1);
+    backdrop-filter: blur(50px);
+    z-index: -1 ;
+}
+
+.logo img{
+    width: 5em;
+    height: 5em;
 }
 
 .navbar a{
     font-size: 1.4em;
-    color: rgb(255, 255, 255);
+    color: white;
     text-decoration: none;
-    margin-left:2.5rem ;
+    margin-left:2rem ;
+    transition: .4s ease-in-out;
+}
+
+.navbar a:hover{
+    color: white;
+    background-color: var(--cor-letra2-terra);
+    border-radius: 50px;
+    padding: 0.5em 1em;
+}
+
+#check{
+    display: none;
 }
 
 .icons{
+    right: 5%;
+    position: absolute;
     font-size: 2em;
     color: aliceblue;
     cursor: pointer;
@@ -47,3 +78,211 @@ body{
 }
 
 /* NAV BAR FINAL*/
+
+/* parallax */
+
+.parallax {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#text {
+    position: absolute;
+    width: 50%;
+    margin-top: 2.5em;
+    letter-spacing: 3px;
+    color: white;
+    font-size: 2em;
+    text-shadow: 2px 2px 1px rgb(0, 0, 0);
+}
+
+.parallax img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+}
+
+/*final  parallax */
+
+/* COMEÇO ELEMENTO TERRA */
+.home{
+    height: 100vh;
+    background: var(--gradient-verde-terra);
+    align-items:center;
+    justify-content:space-between ;
+    padding: 0 10%;
+    display: flex;
+}
+
+.home-image{
+    box-shadow: 0 0 20px var(--cor-letra-terra);
+    display:flex ;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 500px;
+    background-color: var(--cor-letra-terra);
+    border-radius: 50%;
+    transition: .5s ease-in-out;
+}
+
+.home-image img{
+    position: relative;
+    bottom: 22px;
+    max-width: 380px;
+    border-radius: 40%;
+}
+
+.home-image:hover{
+    background-color: var(--cor-letra-terra);
+    margin-top: -5em;
+}
+
+.home-content{
+    max-width: 600px;
+    color: white;
+    text-align: left;
+}
+
+.home-content h1{
+    font-size: 55px;
+    line-height: 1.2;
+}
+
+.home-content h3{
+    font-size: 40px;
+    color: white;
+    -webkit-text-stroke: .5px var(--cor-letra-terra);
+}
+
+.home-content p{
+    font-size: 20px;
+    margin-top: -20px;   
+}
+
+.home-icons{
+    margin: 25px 0 40px;
+}
+
+.home-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border:2px solid var(--cor-letra-terra);
+    border-radius: 50%;
+    font-size: 25px;
+    color: var(--cor-letra-terra);
+    text-decoration: none;
+    margin-left: 12px;
+    transition: .5s ease;
+}
+
+.home-icons a:hover{
+    background-color: var(--cor-letra-terra);
+    color:var(--cor-letra2-terra);
+    box-shadow: 0 0 20px var(--cor-letra-terra);
+}
+
+.btn-cv{
+   padding: 12px 35px;
+   font-size: 25px;
+   text-decoration: none;
+   border:2px solid var(--cor-letra-terra);
+   background-color: var(--cor-letra-terra);
+   color: var(--cor-letra2-terra);
+   border-radius: 40px;
+   transition: .5s ease;
+}
+
+.btn-cv:hover{
+   background-color: var(--cor-letra2-terra);
+   color: var(--cor-letra-terra);
+   box-shadow: 0 0 20px var(--cor-letra-terra);
+}
+
+.card{
+    padding: 20px 2em;
+    max-width: 10em;
+    border: 2px solid black;
+   /*  display: inline-block; */
+}
+
+.img-card img{
+    height: 10em;
+    width: 10em;
+}
+
+/* COMEÇO ELEMENTO TERRA FINAL*/
+
+
+
+
+
+
+
+
+/* MENU HAMBURGUER */
+@media(max-width: 992px){
+    .header{
+        padding: 1.3rem 5%;
+         left:0;
+    }
+}
+
+@media(max-width: 768px){
+    .icons{
+        display: inline-flex;
+    }
+
+    #check:checked~.icons #menu-icon{
+        display: none;
+    }
+
+    .icons #close-icon{
+        display: none;
+    }
+
+     #check:checked~.icons #close-icon{
+        display: block;
+    }
+
+    .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height:0;
+        background-color: rgba(0, 0, 0, .1);
+        backdrop-filter: blur(60px);
+        box-shadow: 0.5rem 1rem rgba(0, 0, 0, .1);
+        overflow: hidden;
+        transition: .3s ease;
+    }
+
+     #check:checked~.navbar{
+         height: 17.7rem;
+    }
+
+    .navbar a{
+        display: block;
+        font-size: 1.5em;
+        margin: 2rem 2em;
+        text-align: right;
+        transform: translateY(-50px);
+        transition: .3s ease;
+    }
+
+      #check:checked~.navbar a{
+           transform: translateY(0);
+    }
+
+}
+/* MENU HAMBURGUER FINAL*/
