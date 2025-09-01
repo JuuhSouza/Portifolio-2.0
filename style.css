@@ -9,12 +9,19 @@ body{
 
 :root{
     --cor-principal: #132623;
-    --gradient-terra-mar:linear-gradient(0deg,rgba(64, 60, 43, 1) 0%, rgba(19, 38, 35, 1) 100%);
-    --gradient-verde-terra:linear-gradient(0deg,rgba(64, 60, 43, 1) 0%, rgba(0, 51, 41, 1) 27%);
+   /*  --gradient-terra-mar:linear-gradient(0deg,#261614 0%, rgba(19, 38, 35, 1) 100%); */
+    --gradient-verde-terra:linear-gradient(0deg,#261614 0%, rgba(0, 51, 41, 1) 27%);
+    --gradient-verde-terra2:linear-gradient(0deg,#261614 0%, rgba(0, 51, 41, 1) 49%);
+    --gradient-terra-agua:linear-gradient(0deg,rgba(62, 110, 140, 1) 0%, rgba(0, 51, 41, 0) 25%, rgba(38, 22, 20, 1) 100%);
     --cor-letra-terra:#6c9a7f;
     --cor-letra2-terra:#01402e;
+    --cor-letra3-terra:#A67153;
     --cor-letra-agua:#8ab0bf;
+    --cor-agua:#3E6E8C;
     --cor-letra-fogo:#ffc64a;
+    --cor-terra:#261614;
+    --cor-verdeParallax:#003329;
+    --cor-cardTerra:#402C28;
 }
 
 
@@ -112,7 +119,7 @@ body{
 /* COMEÇO ELEMENTO TERRA */
 .home{
     height: 100vh;
-    background: var(--gradient-verde-terra);
+    background: var(--cor-verdeParallax);
     align-items:center;
     justify-content:space-between ;
     padding: 0 10%;
@@ -208,19 +215,192 @@ body{
    box-shadow: 0 0 20px var(--cor-letra-terra);
 }
 
-.card{
-    padding: 20px 2em;
-    max-width: 10em;
-    border: 2px solid black;
-   /*  display: inline-block; */
+/* CARDS */
+
+.conteiner-2{
+    background-color: var(--cor-verdeParallax);
+    margin-top: -4em;
 }
 
-.img-card img{
-    height: 10em;
-    width: 10em;
+.conteiner-3{
+    background-color: #261614;
+    margin-top: -4em;
+}
+
+/* TITULOS */
+.titulo-soft{
+    margin-top: 2em;
+    text-align: center;
+    color: var(--cor-letra-terra);
+    font-size: 2em;
+}
+
+.titulo-soft2{
+    margin-top: 2em;
+    text-align: center;
+    color: var(--cor-letra3-terra);
+    font-size: 2em;
+}
+
+/* ICONS */
+
+.icon{
+    text-align: center;
+    color:var(--cor-letra-terra);
+    background: linear-gradient(0deg,#261614 0%, rgba(0, 51, 41, 1) 49%);
+
+}
+.icon2{
+    text-align: center;
+    color:var(--cor-letra3-terra);
+    background: #261614;
+}
+
+.icon i{
+    padding: .3em;
+    background-color: var(--cor-principal);
+    border-radius: 10px;
+    font-size: 5em;
+    margin: .7em;
+    transition: all .5s ease-in-out;
+}
+
+.icon2 i{
+    padding: .3em;
+    background-color: var(--cor-cardTerra);
+    border-radius: 10px;
+    font-size: 5em;
+    margin: .7em;
+    transition: all .5s ease-in-out;
+}
+
+
+ .icon i:hover{
+    box-shadow: 0 0 15px var(--cor-letra-terra);
+} 
+
+ .icon2 i:hover{
+    box-shadow: 0 0 15px var(--cor-letra3-terra);
+} 
+
+.icon p{
+    color: var(--cor-letra-terra);
+    font-size: 25px;
+    text-align: center;
+}
+
+.icon2 p{
+    color: var(--cor-letra3-terra);
+    font-size: 25px;
+    text-align: center;
 }
 
 /* COMEÇO ELEMENTO TERRA FINAL*/
+
+/* PROJETOS carrossel */
+
+.container5{
+    background-color: var(--cor-terra);
+    position: absolute;
+   /*  top: ; */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1000px;
+    height: 600px;
+    background-color: red;
+    box-shadow:  0 30px 50px white;
+}
+
+.container5 .slide .item2{
+    width: 200px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    border-radius:20px ;
+    box-shadow: 0 30px 50px blue;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+
+/* PROJETOS carrossel final */
+
+
+
+
+
+
+
+
+/* PARALLAX 2 */
+
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* main{
+    display: block;
+} */
+
+.container4{
+    width: 100%;
+    max-width: 760px; /* largura máxima */
+    margin: 0 auto; /* auterar a margem */
+    padding: 0 15px;
+    animation: surgir 5s ;
+    animation-timeline: view(); /*  aparecer de acordo com a rolagem */
+    animation-range: cover 0 cover 60%; /* animar ultima parte */
+}
+
+section.modulo.content{
+    padding: 40px 0;
+    background: var(--cor-agua) ;
+}
+
+section.modulo.parallax{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh !important;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-position: 50% 50%; /* posição da imagem */
+    background-repeat: no-repeat; /* n repetir imagem */
+    background-size: cover; /* covrir container */
+    background-attachment: fixed; /* fixar imagem no fundo */
+
+}
+
+section.modulo.parallax h1{
+    color: var(--cor-agua);
+    text-align: center;
+    font-size: 50px;
+    text-transform: uppercase;
+    z-index: 50; /* profundidade do plano */
+   /*  text-shadow: 0 0 5px rgb(255, 255, 255); */
+}
+
+section.modulo.parallax:after{
+    content: "";
+    height: 100%;
+    width: 100%;
+    z-index: 8; /* sensação de profundidade */
+    position: absolute;
+    background: var(--gradient-terra-agua); /* degrade da imagem */
+    
+}
+
+section.modulo.parallax-1{
+    background-image: url(img/sun.png);
+}
+/* PARALLAX 2 FINAL */
+
+
+
+
+
 
 
 
