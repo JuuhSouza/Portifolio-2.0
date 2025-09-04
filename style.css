@@ -3,7 +3,7 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: var(--cor-letra-agua);
+    background-color: var(--cor-verdeParallax);
 }
 
 
@@ -29,8 +29,8 @@ body{
 .header {
     position: absolute;
     top: 0;
-    left:-6em;
-    width: 86%;
+    left:-2em;
+    width: 110%;
     padding: 1.3em 10%;
     display: flex;
     justify-content: space-between;
@@ -94,12 +94,13 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-color: var(--cor-letra-agua);
 }
 
 #text {
     position: absolute;
-    width: 50%;
-    margin-top: 2.5em;
+    width: 40%;
+    margin-top: 1em;
     letter-spacing: 3px;
     color: white;
     font-size: 2em;
@@ -118,6 +119,7 @@ body{
 
 /* COMEÇO ELEMENTO TERRA */
 .home{
+    margin-top: 5em;
     height: 100vh;
     background: var(--cor-verdeParallax);
     align-items:center;
@@ -217,111 +219,52 @@ body{
 
 /* CARDS */
 
-.conteiner-2{
-    background-color: var(--cor-verdeParallax);
-    margin-top: -4em;
+.container4{
+   
 }
 
-.conteiner-3{
-    background-color: #261614;
-    margin-top: -4em;
-}
-
-/* TITULOS */
-.titulo-soft{
-    margin-top: 2em;
-    text-align: center;
+.card-list .card-item{
     color: var(--cor-letra-terra);
-    font-size: 2em;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    padding: 35px;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.24);
+    border-radius: 8px;
+    border: 1px solid var(--cor-letra-terra);
+    backdrop-filter: blur(30px);
 }
 
-.titulo-soft2{
-    margin-top: 2em;
+.tittle h1{
+    font-size:3em ;
+    align-items: center;
     text-align: center;
-    color: var(--cor-letra3-terra);
-    font-size: 2em;
-}
-
-/* ICONS */
-
-.icon{
-    text-align: center;
+    padding: 55px 55px;
     color:var(--cor-letra-terra);
-    background: linear-gradient(0deg,#261614 0%, rgba(0, 51, 41, 1) 49%);
 
 }
-.icon2{
-    text-align: center;
-    color:var(--cor-letra3-terra);
-    background: #261614;
+
+.card-list .card-item h2{
+    color: red;
+    margin-top: 1em;
 }
 
-.icon i{
-    padding: .3em;
-    background-color: var(--cor-principal);
-    border-radius: 10px;
-    font-size: 5em;
-    margin: .7em;
-    transition: all .5s ease-in-out;
-}
-
-.icon2 i{
-    padding: .3em;
-    background-color: var(--cor-cardTerra);
-    border-radius: 10px;
-    font-size: 5em;
-    margin: .7em;
-    transition: all .5s ease-in-out;
+.card-list .card-item .image-card{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid red;
+    padding: 4px;
 }
 
 
- .icon i:hover{
-    box-shadow: 0 0 15px var(--cor-letra-terra);
-} 
-
- .icon2 i:hover{
-    box-shadow: 0 0 15px var(--cor-letra3-terra);
-} 
-
-.icon p{
-    color: var(--cor-letra-terra);
-    font-size: 25px;
-    text-align: center;
-}
-
-.icon2 p{
-    color: var(--cor-letra3-terra);
-    font-size: 25px;
-    text-align: center;
-}
 
 /* COMEÇO ELEMENTO TERRA FINAL*/
 
 /* PROJETOS carrossel */
 
-.container5{
-    background-color: var(--cor-terra);
-    position: absolute;
-   /*  top: ; */
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 1000px;
-    height: 600px;
-    background-color: red;
-    box-shadow:  0 30px 50px white;
-}
-
-.container5 .slide .item2{
-    width: 200px;
-    height: 300px;
-    position: absolute;
-    top: 50%;
-    transform: translate(0, -50%);
-    border-radius:20px ;
-    box-shadow: 0 30px 50px blue;
-    background-position: 50% 50%;
-    background-size: cover;
-}
 
 /* PROJETOS carrossel final */
 
