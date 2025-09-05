@@ -219,8 +219,19 @@ body{
 
 /* CARDS */
 
-.container4{
-   
+/* CARDS */
+
+.tittle-card-skills h1{
+    font-size: 4em;
+    color: var(--cor-letra-terra);
+    text-align: center;
+    padding: 50px; 
+}
+
+.slider-wrapper{
+    overflow: hidden;
+    max-width: 1200px;
+    margin: 0;
 }
 
 .card-list .card-item{
@@ -237,17 +248,16 @@ body{
     backdrop-filter: blur(30px);
 }
 
-.tittle h1{
+.tittle-card h1{
     font-size:3em ;
     align-items: center;
     text-align: center;
     padding: 55px 55px;
     color:var(--cor-letra-terra);
-
 }
 
 .card-list .card-item h2{
-    color: red;
+    color: var(--cor-letra-terra);
     margin-top: 1em;
 }
 
@@ -255,11 +265,11 @@ body{
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    border: 3px solid red;
+    border: 3px solid var(--cor-letra2-terra);
     padding: 4px;
 }
 
-
+/* FINAL CARDS */
 
 /* COMEÇO ELEMENTO TERRA FINAL*/
 
