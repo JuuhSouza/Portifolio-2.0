@@ -11,8 +11,8 @@ body{
     --cor-principal: #132623;
    /*  --gradient-terra-mar:linear-gradient(0deg,#261614 0%, rgba(19, 38, 35, 1) 100%); */
     --gradient-verde-terra:linear-gradient(0deg,#261614 0%, rgba(0, 51, 41, 1) 27%);
-    --gradient-verde-terra2:linear-gradient(0deg,#261614 0%, rgba(0, 51, 41, 1) 49%);
-    --gradient-terra-agua:linear-gradient(0deg,rgba(62, 110, 140, 1) 0%, rgba(0, 51, 41, 0) 25%, rgba(38, 22, 20, 1) 100%);
+    --gradient-verde-terra2:linear-gradient(0deg,#261614 0%, #003329 49%);
+    --gradient-terra-agua:linear-gradient(0deg,rgba(62, 110, 140, 1) 0%, rgba(0, 51, 41, 1) 100%);
     --cor-letra-terra:#6c9a7f;
     --cor-letra2-terra:#01402e;
     --cor-letra3-terra:#A67153;
@@ -274,10 +274,6 @@ body{
 
 /* FINAL CARDS */
 
-
- /* TESTE */
-
- 
 /* COMEÇO ELEMENTO TERRA FINAL*/
 
 /* PROJETOS carrossel */
@@ -289,18 +285,19 @@ body{
         color: var(--cor-letra-terra);
     }
     .container-projects{
-        padding: 2em;
-        margin: 15em;
         margin-top: 1em;
         align-items: center;
         text-align: center;
-
+        background: linear-gradient(0deg,rgba(62, 110, 140, 1) 0%, rgba(0, 51, 41, 1) 100%);
     }
 
     .carousel {
       width: 900px;
       height: 500px;
       overflow: hidden;
+        padding: 2em 10em;
+        text-align: center;
+        margin:3em;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.2);
       margin-bottom: 20px;
@@ -326,6 +323,7 @@ body{
     .thumbnails {
       display: flex;
       gap: 10px;
+     margin-left:22em;
     }
 
     .thumbnails label {
